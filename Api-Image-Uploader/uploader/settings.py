@@ -142,9 +142,9 @@ CORS_ORIGIN_WHITELIST = [
 
 
 CLOUDINARY_CONFIG = {
-    'cloud_name': 'dfnpvfns6',
-    'api_key': '434154925142611',
-    'api_secret': 'mOniGSuH6g-3EWM050ZNMCOfxHE'
+    'cloud_name': '',
+    'api_key': '',
+    'api_secret': ''
 }
 
 cloudinary.config(**CLOUDINARY_CONFIG)

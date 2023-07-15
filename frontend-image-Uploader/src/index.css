@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 :root {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Poppins;
   line-height: 1.5;
   font-weight: 400;
   /*background-color: #242424; */

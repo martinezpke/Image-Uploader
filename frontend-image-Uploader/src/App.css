@@ -27,7 +27,6 @@
 .content label {
   color: #4F4F4F;
   font-size: 18px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -35,7 +34,6 @@
 .content span {
   color: #BDBDBD;
   font-size: 12px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -43,7 +41,6 @@
 .file-img {
   color: #828282;
   font-size: 10px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -69,7 +66,6 @@
 .content__img span {
   color: #BDBDBD;
   font-size: 12px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -107,7 +103,6 @@
 .wrapper-loader label {
   color: #4F4F4F;
   font-size: 18px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -186,7 +181,6 @@
 .wrapper-LinkLoaders label {
   color: #4F4F4F;
   font-size: 18px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word
 }
@@ -226,7 +220,6 @@
   width: 75%;
   color: #4F4F4F;
   font-size: 8px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word;
   white-space: nowrap;
@@ -241,7 +234,6 @@
   border-radius: 8px; 
   color: white;
   font-size: 8px;
-  font-family: Poppins;
   font-weight: 500;
   word-wrap: break-word;
   cursor: pointer;

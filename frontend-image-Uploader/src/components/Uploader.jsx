@@ -68,7 +68,7 @@ const Uploader = () => {
             onDrop={handleDrop}
             onDragOver={handleDragOver}
           >
-            <img src="../../public/image-uploader-master/image.svg" alt="Uploader" />
+            <img src="/frontend-image-Uploader/public/image-uploader-master/image.svg" alt="Uploader" />
             <span>Drag & Drop your image here</span>
             <input ref={fileInputRef} type="file" name="img" onChange={handleInputFile} hidden />
           </div>

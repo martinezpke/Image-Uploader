@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'uploader.wsgi.app'
+WSGI_APPLICATION = 'uploader.wsgi.application'
 
 
 # Database
@@ -136,9 +136,7 @@ CSRF_COOKIE_SAMESITE = None
 
 # Configuración de CORS
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:5173',
-    '127.0.0.1', 
-    '.vercel.app'
+    'http://localhost:5173',  # Agrega aquí los orígenes permitidos
 ]
 
 

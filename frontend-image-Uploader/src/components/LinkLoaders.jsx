@@ -1,4 +1,3 @@
-import React from 'react'
 import copy from 'clipboard-copy';
 
 const LinkLoaders = ({url}) => {

@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import Loader from './Loader'
 import LinkLoaders from './LinkLoaders'
+import LogoUploader from '../../public/image-uploader-master/image.svg'
+
 
 
 const Uploader = () => {
@@ -68,7 +70,7 @@ const Uploader = () => {
             onDrop={handleDrop}
             onDragOver={handleDragOver}
           >
-            <img src="../../public/image-uploader-master/image.svg" alt="Uploader" />
+            <img src={LogoUploader} alt="Uploader" />
             <span>Drag & Drop your image here</span>
             <input ref={fileInputRef} type="file" name="img" onChange={handleInputFile} hidden />
           </div>

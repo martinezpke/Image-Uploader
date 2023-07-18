@@ -18,7 +18,7 @@ const Uploader = () => {
       formData.append('img', file);
 
       const response = await axios.post(
-        'http://127.0.0.1:8000/mi-app/api/image-uploader/',
+        'https://apiimage-uploader.onrender.com/mi-app/api/image-uploader/',
         formData,
         {
           headers: {

@@ -148,8 +148,7 @@ CSRF_COOKIE_SAMESITE = None
 # Configuración de CORS
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:5173',
-    'https://image-uploader-vert.vercel.app',
-    'https://image-uploader-vert.vercel.app/?vercelToolbarCode=Qe3v1JA-SmyGkP_'
+    'https://image-uploader-teal-three.vercel.app'
 ]
 
 

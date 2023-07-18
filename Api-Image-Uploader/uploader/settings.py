@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 from cloudinary import api, uploader
 import cloudinary
 
@@ -22,13 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*l-l*!c0w$xw(753f&xs(52tw$5l*c8mqj(uvlhyqr8epw8+_d'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
@@ -123,6 +127,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -136,15 +147,16 @@ CSRF_COOKIE_SAMESITE = None
 
 # Configuración de CORS
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:5173',  # Agrega aquí los orígenes permitidos
+    'http://localhost:5173',
+    'https://image-uploader-vert.vercel.app/'
 ]
 
 
 
 CLOUDINARY_CONFIG = {
-    'cloud_name': '',
-    'api_key': '',
-    'api_secret': ''
+    'cloud_name': os.environ.get('CLOUD_NAME', default='your secret key'),
+    'api_key': os.environ.get('API_KEY', default='your secret key'),
+    'api_secret': os.environ.get('API_SECRET', default='your secret key')
 }
 
 cloudinary.config(**CLOUDINARY_CONFIG)

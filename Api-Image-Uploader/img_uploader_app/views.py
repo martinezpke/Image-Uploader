@@ -27,8 +27,10 @@ class MyView(View):
             # Concatenar el nuevo nombre con la extensión del archivo
             newName = f"file-{random_name}.{fileExt}"
             
+            # Guarda la imagen en la carpeta temp/name
             image_path = default_storage.save('temp/' + newName, ContentFile(img.read()))
             
+            # llama el metodo uploader_file para obtener la URL 
             image_url = self.uploader_file(image_path, newName)
             
             return JsonResponse({'mensaje': 'Imagen recibida correctamente.', 'url': image_url})
